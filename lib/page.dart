@@ -13,8 +13,6 @@ class _MyWidgetState extends State<MyWidget> {
   List<DataModel> list = [
     DataModel(
       son: 189,
-      discription:
-          'lanasmith It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. There are many variation... more',
       time: '2 hours ago',
       avatar:
           "https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg?w=2000",
@@ -23,8 +21,6 @@ class _MyWidgetState extends State<MyWidget> {
     ),
     DataModel(
       son: 189,
-      discription:
-          'lanasmith It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. There are many variation... more',
       time: '2 hours ago',
       avatar:
           "https://media.istockphoto.com/id/537373196/photo/trees-forming-a-heart.jpg?s=612x612&w=0&k=20&c=onZKNjkycICe4q2ZDnKi39z42Ax9tpZT7pph-2e5Seo=",
@@ -33,8 +29,6 @@ class _MyWidgetState extends State<MyWidget> {
     ),
     DataModel(
       son: 189,
-      discription:
-          'lanasmith It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. There are many variation... more',
       time: '2 hours ago',
       avatar:
           "https://media.istockphoto.com/id/537373196/photo/trees-forming-a-heart.jpg?s=612x612&w=0&k=20&c=onZKNjkycICe4q2ZDnKi39z42Ax9tpZT7pph-2e5Seo=",
@@ -43,8 +37,6 @@ class _MyWidgetState extends State<MyWidget> {
     ),
     DataModel(
       son: 189,
-      discription:
-          'lanasmith It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. There are many variation... more',
       time: '2 hours ago',
       avatar:
           "https://media.istockphoto.com/id/537373196/photo/trees-forming-a-heart.jpg?s=612x612&w=0&k=20&c=onZKNjkycICe4q2ZDnKi39z42Ax9tpZT7pph-2e5Seo=",
@@ -138,7 +130,27 @@ class _MyWidgetState extends State<MyWidget> {
                     Container(
                       margin: const EdgeInsets.only(top: 20),
                       padding: const EdgeInsets.symmetric(horizontal: 16),
-                      child: Text(list[index].discription),
+                      child: RichText(
+                        text: const TextSpan(
+                            text: 'lanasmith',
+                            style: TextStyle(
+                                fontWeight: FontWeight.w900,
+                                color: Color(0xff172B4D)),
+                            children: <TextSpan>[
+                              TextSpan(
+                                text:
+                                    ' It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. There are many variation... ',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0xff172B4D),
+                                ),
+                              ),
+                              TextSpan(
+                                text: 'more',
+                                style: TextStyle(color: Colors.grey),
+                              )
+                            ]),
+                      ),
                     ),
                     Container(
                       margin: const EdgeInsets.only(top: 16),
